@@ -1,0 +1,7 @@
+a {
+  color: $app-color;
+  &:hover, &:active, &:focus {
+    color: $app-color;
+    text-decoration:none;
+  }
+}

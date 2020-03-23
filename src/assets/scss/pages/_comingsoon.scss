@@ -1,0 +1,10 @@
+.top-section {
+  &.coming-soon {
+    padding:80px;
+    .coming-soon-text {
+      line-height: 50px;
+      letter-spacing:40px;
+      color: $app-color;
+    }
+  }
+}

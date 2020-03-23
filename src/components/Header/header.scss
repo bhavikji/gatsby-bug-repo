@@ -1,0 +1,59 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/base/color';
+.menu-container {
+  height: 64px;
+}
+.header-cover {
+  position: sticky;
+  top: 0;
+  z-index: 1091;
+}
+
+.logo {
+  width: auto;
+  height: auto;
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.navbar-basic {
+  width: 100%;
+  background: $white;
+  border-color: $white;
+  border-radius: 0;
+  ul {
+    .nav-item {
+      @media screen and (min-width: 991px) {
+        &.show-in-desktop {
+          display: list-item !important;
+        }
+      }
+      .nav-link {
+        position: relative;
+        &.nav-link-basic {
+          padding: 15px;
+          position: relative;
+          font-weight: 600;
+          color: $black;
+          &::after {
+            content: '';
+            display:block;
+            width:0;
+            height:2px;
+            background-image: $base-gradient-original;
+            transition: color,width 1s;
+          }
+          &:hover {
+            color: $black;
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

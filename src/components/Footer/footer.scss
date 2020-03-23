@@ -1,0 +1,252 @@
+@import '../../assets/scss/base/color';
+@import '../../assets/scss/variables';
+.fake-footer-block {
+  width: 1px;
+  position: relative;
+  z-index: 3;
+  height: 105vh;
+}
+.footer-basic {
+  background: $black;
+  color: $white;
+  padding:40px 18px 40px;
+  width: 100%;
+  z-index: 2;
+  box-sizing: border-box;
+  .footer-heading-basic {
+    padding:75px 100px 0 100px;
+    .heading-cover{
+      padding:0 10px 25px 10px;
+    }
+  }
+  .heading-text {
+    padding:0 40px 45px 40px;
+  }
+  .social-cta-wrapper {
+    padding:29px 0 42px 0;
+    .footer-cta {
+      padding:0;
+      .social-cta {
+        display: inline-flex;
+        padding: 0 8px;
+        a {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: none;
+          color: $white;
+          transition: 300ms opacity ease-in-out;
+          position: relative;
+          &:hover {
+            text-decoration: none;
+            color: transparent;
+            background: transparent;
+            justify-content: center;
+            transition: 300ms opacity ease-in-out;
+            background: $white;
+            border: 1px solid transparent;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            .default {
+              opacity: 0;
+              width: 35px;
+              height: 35px;
+            }
+            .hover {
+              margin: auto;
+              display: block;
+              text-align: center;
+              padding:8px 0;
+              transition: 300ms opacity ease-in-out;
+              opacity: 1;
+              position: absolute;
+              width: 35px;
+              height: 35px;
+            }
+          }
+          .default {
+            margin: auto;
+            display: block;
+            text-align: center;
+            padding:8px 0;
+            transition: 300ms opacity ease-in-out;
+            opacity: 1;
+            position: absolute;
+            width: 35px;
+            height: 35px;
+          }
+          .hover {
+            opacity:0;
+            display: block;
+            position: absolute;
+            width: 35px;
+            height: 35px;
+          }
+        }
+      }
+    }
+  }
+
+  .made-in-india-wrapper {
+    .love {
+      margin: 0 auto;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .madein {
+      display: block;
+      height: 20px;
+      margin-bottom: 0;
+      animation-duration: 4s;
+      animation-fill-mode: both;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-name: madein;
+      color: $white;
+    }
+
+    .love {
+      .heart {
+        top: 32px;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        z-index: 1;
+        opacity: 0;
+        color: transparent;
+        //background: #a83f39;
+        -webkit-background-clip: text;
+        background-clip: text;
+        pointer-events: none;
+        animation-duration: 4s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-name: heartbeat;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      h5.madeinIndia {
+        position: relative;
+        z-index: 2;
+        font-size: 14px;
+        margin-top: 5px;
+        left: 2px;
+        letter-spacing: 2px;
+      }
+    }
+
+    @keyframes madein {
+      0% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px);
+      }
+
+      8% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px);
+      }
+
+      14% {
+        transform: translate(0px, -6px);
+      }
+
+      20% {
+        transform: translate(0px, -7px);
+      }
+
+      25% {
+        transform: translate(0px, -13px);
+      }
+
+      32% {
+        transform: translate(0px, -15px);
+      }
+
+      39% {
+        transform: translate(0px, -13px);
+      }
+
+      44% {
+        transform: translate(0px, -8px);
+      }
+
+      52% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px);
+      }
+
+      100% {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0px);
+      }
+    }
+
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(0.5) translate(0px, 16px);
+        opacity: 0;
+      }
+
+      11.25% {
+        transform: scale(1.1) translate(0px, 6px);
+        opacity: 0.48;
+      }
+
+      15% {
+        transform: scale(1) translate(0px, 4px);
+        opacity: 0.52;
+      }
+
+      22.5% {
+        transform: scale(1.25) translate(0px, 0px);
+        opacity: 0.58;
+      }
+
+      37.5% {
+        transform: scale(1.1) translate(0px, 2px);
+        opacity: 0.55;
+      }
+
+      45% {
+        transform: scale(1) translate(0px, 5px);
+      }
+
+      63.75% {
+        transform: scale(0.85) translate(0px, 14px);
+        opacity: 0.35;
+      }
+
+      75% {
+        transform: scale(0.65) translate(0px, 22px);
+        opacity: 0.35;
+      }
+    }
+    .madeinIndia {
+      margin: 0;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+
+  .footer-basic {
+    padding: 0 0 18px 0;
+    .footer-heading-basic{
+      padding:38px 0px;
+      .heading-cover {
+        text-align: center;
+      }
+    }
+    .heading-text{
+      padding: 0 0 45px;
+    }
+  }
+
+}

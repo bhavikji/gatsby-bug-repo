@@ -1,0 +1,62 @@
+.btn-basic {
+  box-sizing: border-box;
+  text-decoration: none;
+  -webkit-appearance: none;
+  background: transparent;
+  border-color: transparent;
+  white-space: wrap;
+  overflow: hidden;
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
+  min-width: 250px;
+  max-width: 100%;
+  font-size: 20px;
+  padding: 11px 30px 14px 30px;
+  outline: none;
+  transition: color 0.8s ease-out, border-color 0.8s ease-out, background 0.8s ease-out, background-color 0.8s ease-out;
+  &.btn-full_gradient {
+    background: $white;
+    color: $app-color;
+    border: 1px solid $white;
+    &:hover {
+      text-decoration: none;
+      background: $app-color;
+      color: $white;
+      border: 1px solid $app-color;
+    }
+  }
+  &.invert {
+    background: $app-color;
+    color: $white;
+    border: 1px solid $white;
+    &:hover {
+      text-decoration: none;
+      background: $app-color;
+      color: $white;
+      border: 1px solid $app-color;
+    }
+  }
+}
+.load-more {
+  padding:0 0 50px;
+  margin: 40px auto;
+  a {
+    margin: 50px auto;
+    color: $app-color;
+    padding-left: 20px;
+    border: 1px solid $app-color;
+    position: relative;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    border-radius: 50px;
+    min-width: 250px;
+    max-width: 100%;
+    font-size: 20px;
+    padding: 11px 30px 14px 30px;
+    outline: none;
+    cursor: pointer;
+  }
+}

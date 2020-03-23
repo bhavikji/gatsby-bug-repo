@@ -1,0 +1,40 @@
+.base-section {
+  z-index: 3;
+  position: relative;
+}
+
+.margin-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.margin-30 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  background-color: $white;
+  z-index: 3;
+  position: relative;
+}
+
+//common css for blog and tribute
+
+//theme line
+.line__p {
+  width: 50px;
+  height: 2px;
+  margin: auto;
+  .line {
+    width: 100%;
+    height: 2px;
+    background: $base-gradient-original;
+  }
+}
+
+//common layout design for detail page
+
+.fake-blog {
+  height: 105vh;
+}

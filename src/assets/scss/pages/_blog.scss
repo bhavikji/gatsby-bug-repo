@@ -1,0 +1,23 @@
+.blog-banner-wrapper {
+  height: 75%;
+  overflow: hidden;
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    height: auto;
+  }
+}
+.blog-banner-text {
+  height: 25%;
+  @media screen and (min-width: 320px) and (max-width: 1024px) {
+    height: auto;
+  }
+}
+
+.blog-section {
+  .blog-link {
+    @media screen and (min-width: 320px) and (max-width: 768px) {
+      &:not(&:last-child) {
+        border-bottom: 1px solid #d9d9d9;
+      }
+    }
+  }
+}

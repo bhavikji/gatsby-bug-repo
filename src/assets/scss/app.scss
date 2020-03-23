@@ -1,0 +1,21 @@
+// Fonts
+@font-face {
+  font-family: 'sans-serif';
+  font-display: auto;
+  src: local('Open sans'), url(https://fonts.googleapis.com/css?family=Oxygen:300,400,700) format('woff2');
+}
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Colors
+@import 'base/color';
+//base
+@import 'base/appconfig';
+@import 'base/typography';
+@import 'base/buttons';
+@import 'base/hyperlinks';
+@import 'base/utills';
+@import 'pages/home';

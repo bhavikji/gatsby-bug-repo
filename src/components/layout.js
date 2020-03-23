@@ -5,31 +5,29 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { ThemeProvider } from "styled-components";
+import PropTypes from 'prop-types';
+import React from 'react';
+import '../assets/scss/app.scss';
 import { useSiteMetadata } from '../hooks';
-import Header from './Header/index'
-import Footer from "./Footer/index";
-import lightTheme from "../theme/light";
-import "../assets/scss/app.scss";
+import Footer from './Footer/index';
+import Header from './Header/index';
 
 const Layout = ({ children }) => {
-    const {siteMetadata} =useSiteMetadata()
-    const {menu} = siteMetadata;
+  const { siteMetadata } = useSiteMetadata();
+  const { menu } = siteMetadata;
   return (
-    <ThemeProvider theme={lightTheme}>
+    <React.Fragment>
       <Header />
       <div>
         <main>{children}</main>
         <Footer/>
       </div>
-    </ThemeProvider>
-  )
-}
+    </React.Fragment>
+  );
+};
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

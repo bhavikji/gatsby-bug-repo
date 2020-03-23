@@ -23,7 +23,6 @@ module.exports = {
     'MarkdownRemark.frontmatter.categories': 'MarkdownRemark.frontmatter.title',
   },
   plugins: [
-    'gatsby-plugin-sitemap',
     'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-source-filesystem',
@@ -116,10 +115,6 @@ module.exports = {
             },
           },
           {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: { wrapperStyle: 'margin-bottom: 1.0725rem' },
-          },
-          {
             resolve: 'gatsby-remark-autolink-headers',
             options: {
               maintainCase: true,
@@ -138,37 +133,11 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        host: 'https://www.bhavikji.com',
-        sitemap: 'https://www.bhavikji.com/sitemap.xml',
-        policy: [
-          {
-            userAgent: '*',
-            allow: '/',
-            disallow: ['/cgi-bin/'],
-            crawlDelay: 10,
-          },
-        ],
-      },
-    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-plugin-prefetch-google-fonts',
-      options: {
-        fonts: [
-          {
-            family: 'Oxygen',
-            variants: ['300', '400', '700'],
-          },
-        ],
-      },
-    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -181,8 +150,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Bhavikji',
-        short_name: 'Bhavikji',
+        name: 'example',
+        short_name: 'example',
         start_url: '/',
         background_color: '#fff',
         theme_color: '#F26A26',
@@ -192,16 +161,8 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    'gatsby-plugin-offline',
+    // 'gatsby-plugin-offline',
     // 'gatsby-plugin-catch-links',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: website.googleAnalyticsId,
-        head: false,
-        anonymize: true,
-      },
-    },
   ],
 };

@@ -3,7 +3,7 @@ backend:
   branch: develop
 
 media_folder: static/blogs
-public_folder: blogs
+public_folder: /blogs
 
 collections:
 - name: blog

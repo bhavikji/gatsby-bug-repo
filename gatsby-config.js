@@ -34,15 +34,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/blogs`,
-        name: 'blogs',
+        path: `${__dirname}/static/author`,
+        name: 'author',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/author`,
-        name: 'author',
+        name: 'content/assets',
+        path: `${__dirname}/content/assets`,
       },
     },
     {
@@ -93,12 +93,6 @@ module.exports = {
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'author',
-            },
-          },
-          {
-            resolve: 'gatsby-remark-relative-images',
-            options: {
-              name: 'blogs',
             },
           },
           {

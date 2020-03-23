@@ -1,37 +1,29 @@
-import React from "react"
-import {Link, graphql} from "gatsby"
-import Img from "gatsby-image"
-import Layout from "../components/layout"
-import SocialConnect from "../components/SocialConnect";
-import BlogCard from "../components/BlogCard";
+import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
+import React from 'react';
+import BlogCard from '../components/BlogCard';
+import Layout from '../components/layout';
 import SEO from '../components/SEO';
+import SocialConnect from '../components/SocialConnect';
 
-import logo from '../../static/logo/logoo.svg'
 
-const IndexPage = props => {
-    const {
-        data: {
-            markdownRemark: {frontmatter},
-            BlogPages: {totalCount},
-            BlogPages
-        },
-    } = props;
-    return (
+const IndexPage = (props) => {
+  const {
+    data: {
+      markdownRemark: { frontmatter },
+      BlogPages: { totalCount },
+      BlogPages
+    },
+  } = props;
+  return (
         <Layout>
             <SEO
-                title="Bhavikji"
-                desc="Bhavik Bamania, affectionately known as Bhavikji is web developer, designer, an aspiring writer, poet, he loves to write on history, sociology, politics, astrology, mentalism and psychology.He want to be a published writer someday."
-                keyword="Bhavik Bamania, Bhavikji, Blog, Poet, Poetry, Tributes, Tribunals, Critic, Astrology, Palmistry, Writing, Developer, Designer, Web Designer, Jodhpur, Ahmedabad, Film Review"
+                title="example"
+                desc="example"
+                keyword="example"
             />
             <section className="landing-section top-section">
                 <div className="container-fluid home-page">
-                    {/*<div className="row d-none d-md-flex">
-                        <div className="col">
-                            <div className="d-flex justify-content-center m-2">
-                                <img src={logo} className="logo-image" alt="Bhavikji"/>
-                            </div>
-                        </div>
-                    </div>*/}
                     <div className="row margin-30">
                         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                             <div className="d-flex justify-content-center base-section">
@@ -151,7 +143,7 @@ const IndexPage = props => {
                         </section>
                     </div>
                 </section>
-                {/*<section className="tribunals base-section">
+                {/* <section className="tribunals base-section">
                     <div className="container-fluid recent-activities" id="recent-tribunals">
                         <div className="row">
                             <div className="col">
@@ -167,13 +159,13 @@ const IndexPage = props => {
                             <BlogCard/>
                         </div>
                     </div>
-                </section>*/}
+                </section> */}
             </section>
         </Layout>
-    )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
     query {
@@ -231,4 +223,4 @@ export const query = graphql`
       }
     }
 }
-`
+`;

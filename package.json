@@ -1,7 +1,7 @@
 {
   "name": "Bhavikji",
   "private": true,
-  "description": "Bhavikji website",
+  "description": "example website",
   "version": "2.0.0",
   "author": "Bhavik Bamania <bhavikbamania@gmail.com>",
   "dependencies": {
